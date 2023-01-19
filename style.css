@@ -21,10 +21,13 @@ body {
 }
 
 header {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 48px;
+    background-color: var(--bg-color);
 }
 
 header > img {
@@ -32,8 +35,6 @@ header > img {
 }
 
 button {
-    width: 216px;
-    height: 52px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -49,17 +50,18 @@ button {
 form {
     display: flex;
     align-items: center;
-    margin-left: 48px;
+    padding: 180px 48px 48px;
+    width: fit-content;
 }
 
-.habbits {
+.habits {
     display: flex;
     flex-direction: column;
     gap: 24px;
     margin-top: 50px;
 }
 
-.habbit {
+.habit {
     width: 64px;
     height: 64px;
     display: flex;
@@ -93,4 +95,10 @@ form {
 
 input:checked {
     background: var(--first-color);
+}
+
+@media (max-width: 570px) {
+    header button div {
+        display: none;
+    }
 }
